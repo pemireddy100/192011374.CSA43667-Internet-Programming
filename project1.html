@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: lightgreen; /* Updated color to light green */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: lightgreen; /* Updated color to light green */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JOB APPLICATION</h1>
+        <nav>
+            <ul>
+                <li><a href="#login_admin">admin login</a></li>
+                <li><a href="#approve_director">Approve director</a></li>
+                <li><a href="#view_user">View User</a></li>
+                <li><a href="#view_report">View Report</a></li>
+                <li><a href="#register_director">Register Director</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#post_vacancy">Post Vacancy</a></li>
+                <li><a href="#view_vacancy">View Vacancy</a></li>
+                <li><a href="#view_applied_users">View Applied Users</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="login_admin">
+        <h2>login admin</h2>
+         <div class="container">
+        <h2>Admin Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+    </section>
+
+    <section id="approve_director">
+        <h2>Approve director</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approve/Reject with Comment</title>
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Application Review</h2>
+        <form>
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="reject()">Reject</button>
+                <button type="button" onclick="approve()">Approve</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function reject() {
+            var comment = document.getElementById('comment').value;
+            alert('Application Rejected. Comment: ' + comment);
+        }
+
+        function approve() {
+            var comment = document.getElementById('comment').value;
+            alert('Application Approved. Comment: ' + comment);
+        }
+    </script>
+</body>
+        <!-- Add content for approving directors -->
+    </section>
+
+    <section id="view_user">
+        <h2>View User</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>View User</h1>
+    </header>
+    <section>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>User</td>
+            </tr>
+            <tr>
+                <td>Jane Doe</td>
+                <td>jane@example.com</td>
+                <td>User</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+    </section>
+</body>
+        <!-- Add content for viewing users -->
+    </section>
+
+    <section id="view_report">
+        <h2>View Report</h2>
+<div class="container">
+        <h2>View Report</h2>
+
+        <div class="report-content">
+            <h3>Report Title 1</h3>
+            <p>Report content goes here...</p>
+        </div>
+
+        <div class="report-content">
+            <h3>Report Title 2</h3>
+            <p>Report content goes here...</p>
+        </div>
+
+        <div class="report-content">
+            <h3>Report Title 3</h3>
+            <p>Report content goes here...</p>
+        </div>
+
+        <!-- Add more report sections as needed -->
+
+    </div>
+        <!-- Add content for viewing reports -->
+    </section>
+
+    <section id="register_director">
+        <h2>Register Director</h2>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="userID">User ID:</label>
+                    <input type="text" id="userID" name="userID" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="rePassword">Re-enter Password:</label>
+                    <input type="password" id="rePassword" name="rePassword" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="login">
+        <h2>Login</h2>
+ <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login">
+            </div>
+
+        <!-- Add content for login -->
+    </section>
+
+    <section id="post_vacancy">
+        <h2>Post Vacancy</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Vacancy</title>
+    <style>
+        .job-card {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .job-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .job-details {
+            margin-top: 10px;
+        }
+        .contact-info {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="job-card">
+        <h2>SOFTWARE DEVELOPER</h2>
+        <img src="file:///C:/Users/welcome/Downloads/WhatsApp%20Image%202023-10-18%20at%209.33.14%20AM.jpeg" alt="Job Image">
+        <div class="job-details">
+            <h3>Description</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ex in arcu laoreet, non condimentum odio feugiat.</p>
+        </div>
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Email: example@example.com</p>
+            <p>Phone: +1 234 567 890</p>
+            <p>Location: City, Country</p>
+        </div>
+        <button>Apply Now</button>
+    </div>
+</body>
+        <!-- Add content for posting vacancies -->
+    </section>
+
+    <section id="view_vacancy">
+        <h2>View Vacancy</h2>
+<body>
+    <header>
+        <h1>View Vacancy</h1>
+    </header>
+
+    <section>
+        <table>
+            <tr>
+                <th>Vacancy Title</th>
+                <th>Location</th>
+                <th>Category</th>
+                <th>Posted By</th>
+            </tr>
+            <tr>
+                <td>Software Developer</td>
+                <td>New York</td>
+                <td>IT</td>
+                <td>John Doe</td>
+            </tr>
+            <tr>
+                <td>Marketing Manager</td>
+                <td>San Francisco</td>
+                <td>Marketing</td>
+                <td>Jane Smith</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Job Portal</p>
+    </footer>
+</body>
+
+        <!-- Add content for viewing vacancies -->
+    </section>
+
+    <section id="view_applied_users">
+        <h2>View Applied Users</h2>
+<table>
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Application Status</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john.doe@example.com</td>
+            <td>Approved</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane Doe</td>
+            <td>jane.doe@example.com</td>
+            <td>Rejected</td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </table>
+        <!-- Add content for viewing applied users -->
+    </section>
+
+    <section id="logout">
+        <h2>Logout</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Out</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>You are logged in!</h1>
+    <button onclick="logOut()">Log Out</button>
+
+    <script>
+        function logOut() {
+            // Perform any logout actions here
+            alert('You have been logged out.');
+            // Redirect to a different page if necessary
+            // window.location.href = 'logout.html';
+        }
+    </script>
+</body>
+        <!-- Add content for logout -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 P.Narasimha Reddy</p>
+    </footer>
+</body>
+</html>

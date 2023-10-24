@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Building Management System</title>
+    <script>
+        // Function to handle manager login form submission
+        function managerLogin() {
+            var username = document.getElementById("managerUsername").value;
+            var password = document.getElementById("managerPassword").value;
+
+            // Check username and password (add your authentication logic here)
+            if (username === "manager" && password === "password") {
+                // Hide manager login form
+                document.getElementById("managerLoginForm").style.display = "none";
+                // Show supervisor login form
+                document.getElementById("supervisorLoginForm").style.display = "block";
+            } else {
+                alert("Invalid credentials. Please try again.");
+            }
+            return false; // Prevent form submission
+        }
+
+        // Function to handle supervisor login form submission
+        function supervisorLogin() {
+            var username = document.getElementById("supervisorUsername").value;
+            var password = document.getElementById("supervisorPassword").value;
+
+            // Check username and password (add your authentication logic here)
+            if (username === "supervisor" && password === "password") {
+                // Hide supervisor login form
+                document.getElementById("supervisorLoginForm").style.display = "none";
+                // Show block selection
+                document.getElementById("blockSelection").style.display = "block";
+            } else {
+                alert("Invalid credentials. Please try again.");
+            }
+            return false; // Prevent form submission
+        }
+    </script>
+</head>
+<body>
+
+<!-- Manager Login Form -->
+<div id="managerLoginForm">
+    <h2>Manager Login</h2>
+    <form onsubmit="return managerLogin();">
+        Username: <input type="text" name="username" id="managerUsername"><br>
+        Password: <input type="password" name="password" id="managerPassword"><br>
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+<!-- Supervisor Login Form -->
+<div id="supervisorLoginForm" style="display:none;">
+    <h2>Supervisor Login</h2>
+    <form onsubmit="return supervisorLogin();">
+        Username: <input type="text" name="username" id="supervisorUsername"><br>
+        Password: <input type="password" name="password" id="supervisorPassword"><br>
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+<!-- ... (rest of your HTML) ... -->
+
+</body>
+</html>

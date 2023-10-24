@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers' Complaints</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-image: url('https://th.bing.com/th/id/OIP.iR7z4js6pCbCTtTw2uELXAHaE7?pid=ImgDet&rs=1'); /* Add your image URL here */
+            background-size: cover;
+            background-position: center;
+            color: #fff; /* Set text color to white for visibility */
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff; /* Set text color to white for visibility */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background for better readability */
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .complaints {
+            color: #333; /* Reset color for complaints */
+            font-weight: bold;
+        }
+
+        .suggestion {
+            color: #4caf50; /* Green color for suggestions */
+            font-weight: bold;
+        }
+
+        .issue {
+            color: #ff5722; /* Orange color for issues */
+            font-weight: bold;
+        }
+
+        .urgent {
+            color: #f44336; /* Red color for urgent complaints */
+            font-weight: bold;
+        }
+
+        .post-complaint-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .post-complaint-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Farmers' Complaints</h1>
+
+    <table>
+        <tr>
+            <th>Complaint Type</th>
+            <th>Complaint Details</th>
+        </tr>
+        <tr>
+            <td class="issue">Issue</td>
+            <td class="complaints">The crop yield has been consistently low for the past two months.</td>
+        </tr>
+        <tr>
+            <td class="urgent">Urgent</td>
+            <td class="complaints">The irrigation system is malfunctioning and needs immediate attention.</td>
+        </tr>
+        <tr>
+            <td class="suggestion">Suggestion</td>
+            <td class="complaints">Consider implementing organic farming practices for better soil health.</td>
+        </tr>
+    </table>
+
+    <a href="postsolution.html" class="post-complaint-button">Post sulution</a>
+</body>
+</html>

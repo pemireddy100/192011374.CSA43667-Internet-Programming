@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Thank You</title>
+    <style>
+        body {
+            background-image: url('https://www.invitationhouse.com/uploads/P/28736/FL1.jpeg'); /* Replace 'path_to_your_image.jpg' with the actual path to your image file */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* This ensures the background covers the entire viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0; /* Remove default margin to center the content */
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .thank-you {
+            text-align: center;
+            font-size: 64px; /* Increased font size */
+            animation: slideIn 1s ease-in-out;
+            color:#0000FF; /* Set the text color to make it visible against the background */
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you">
+        <p>Thank You!</p>
+    </div>
+</body>
+</html>

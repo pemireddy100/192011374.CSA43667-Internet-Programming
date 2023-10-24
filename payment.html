@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.etimg.com/thumb/msid-64336222,width-480,height-360,imgsize-63461,resizemode-75/miss-missy-1200000.jpg'); /* Replace with your image file name */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .payment-method img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+
+        .payment-method label {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .payment-method input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Payment Method</h1>
+
+        <div class="payment-method">
+            <input type="radio" name="payment" id="paypal">
+            <label for="paypal">PayPal</label>
+            <img src="https://static.vecteezy.com/system/resources/previews/022/101/081/original/paypal-logo-transparent-free-png.png" alt="PayPal">
+        </div>
+
+        <div class="payment-method">
+            <input type="radio" name="payment" id="stripe">
+            <label for="stripe">Stripe</label>
+            <img src="https://media.designrush.com/inspiration_images/135142/conversions/_1511452770_462_stripe-mobile.jpg" alt="Stripe">
+        </div>
+
+        <div class="payment-method">
+            <input type="radio" name="payment" id="creditCard">
+            <label for="creditCard">Credit Card</label>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDwxcD5jyxFY28GHkmihpzacdG_5WXAJGJ6Ja4lFTZ3g&s" alt="Credit Card">
+        </div>
+
+        <div class="payment-method">
+            <input type="radio" name="payment" id="venmo">
+            <label for="venmo">Venmo</label>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTSj---JDf5B88vOcWZDcvonKxtgny8hPI2wVJvdxMYyNxm3KDFW573I5z6THrQWCtF7s&usqp=CAU" alt="Venmo">
+        </div>
+
+        <button onclick="showThankYouPopup()">Proceed to Payment</button>
+    </div>
+
+    <script>
+        function showThankYouPopup() {
+            var popup = window.open('thankyou.html', 'Thank You', 'width=600,height=400');
+            if (window.focus) { popup.focus() }
+            return false;
+        }
+    </script>
+</body>
+</html>
